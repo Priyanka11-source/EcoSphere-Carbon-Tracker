@@ -31,20 +31,21 @@ const auth = getAuth(app);
 
 // Use a persistent local cache for offline scenarios and target the correct database instance
 let db;
+const dbId = import.meta.env.VITE_FIRESTORE_DATABASE_ID || "(default)";
 try {
   db = initializeFirestore(app, {
     localCache: persistentLocalCache({
       tabManager: persistentMultipleTabManager()
     })
-  }, "ai-studio-23766aeb-80ce-4248-9d3c-44601b5e2ba6");
+  }, dbId);
 } catch (err) {
   console.warn("Persistent cache failed, falling back to default/memory cache:", err);
   // Fallback if TabManager/IndexedDB is restricted in cross-origin preview iframe
   try {
-    db = initializeFirestore(app, {}, "ai-studio-23766aeb-80ce-4248-9d3c-44601b5e2ba6");
+    db = initializeFirestore(app, {}, dbId);
   } catch (innerErr) {
     console.error("Critical Firestore init failure:", innerErr);
-    db = getFirestore(app, "ai-studio-23766aeb-80ce-4248-9d3c-44601b5e2ba6");
+    db = getFirestore(app, dbId);
   }
 }
 
