@@ -2,16 +2,18 @@
 
 <div align="center">
 
-### Track • Understand • Reduce • Inspire
+## Developed by PRIYANKA PRIYADARSINI BEJ
 
-A next-generation carbon footprint awareness platform that empowers individuals to measure, visualize, and reduce their environmental impact through intelligent insights, gamification, sustainability challenges, and AI-powered recommendations.
+### Track your carbon. Transform your habits. Build a greener future.
+
+🌐 **Live Demo:** https://project-f4f70adf-9a88-48e9-962.web.app/
 
 ![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
 ![Firebase](https://img.shields.io/badge/Firebase-Backend-FFCA28?logo=firebase)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styling-38BDF8?logo=tailwindcss)
 ![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?logo=vite)
 ![Motion](https://img.shields.io/badge/Motion-Animations-purple)
-![License](https://img.shields.io/badge/Status-Production_Ready-success)
+![Status](https://img.shields.io/badge/Status-Production_Ready-success)
 
 </div>
 
@@ -19,21 +21,29 @@ A next-generation carbon footprint awareness platform that empowers individuals 
 
 # 🌱 Overview
 
-Climate change is one of the most pressing challenges of our generation, yet most individuals struggle to understand how their daily choices contribute to their carbon footprint.
+Climate change remains one of the greatest global challenges, yet many individuals struggle to understand how everyday decisions affect their carbon footprint.
 
-**EcoSphere Climate Ledger Hub** bridges that gap by transforming carbon tracking into an engaging, intelligent, and action-driven experience.
+**EcoSphere Climate Ledger Hub** transforms sustainability tracking into an engaging and intelligent experience by combining carbon auditing, ecosystem simulation, gamification, data analytics, cloud synchronization, and AI-powered recommendations.
 
-Rather than merely displaying numbers, EcoSphere helps users:
+Instead of simply displaying numbers, EcoSphere empowers users to:
 
-- 📊 Measure personal carbon emissions
+- 📊 Track carbon emissions in real time
 - 🌿 Visualize environmental impact through a living ecosystem
-- 🎯 Build sustainable habits through challenges
-- 🏆 Earn achievements and rewards
-- 📈 Analyze trends over time
-- 🤖 Receive personalized AI sustainability advice
+- 🎯 Build sustainable habits with actionable pledges
+- 🏆 Earn rewards and achievement badges
+- 📈 Monitor long-term sustainability trends
+- 🤖 Receive AI-powered carbon reduction advice
 - 📄 Generate professional offset certificates
 
-The platform combines environmental awareness, behavioral science, gamification, and modern web technologies into a unified sustainability ecosystem.
+The platform is designed to encourage measurable environmental responsibility while making climate awareness interactive, rewarding, and accessible.
+
+---
+
+# 🌐 Live Deployment
+
+| Platform | Link |
+|-----------|------|
+| Production Application | https://project-f4f70adf-9a88-48e9-962.web.app/ |
 
 ---
 
@@ -45,59 +55,50 @@ The platform combines environmental awareness, behavioral science, gamification,
 
 ---
 
-# ✅ Challenge Expectations Covered
+# ✅ Challenge Expectations Addressed
 
 ### Smart Dynamic Assistant
-
 AI-powered sustainability advisor providing contextual recommendations.
 
-### Logical Decision Making
-
-Personalized suggestions based on user activity and carbon trends.
+### Personalized Insights
+Behavior-based analysis tailored to user carbon activity.
 
 ### Real-World Usability
+Tracks transportation, food, energy, and consumption habits.
 
-Practical carbon logging system covering everyday activities.
+### Clean Architecture
+Modular React ecosystem built for maintainability and scalability.
 
-### Clean & Maintainable Code
-
-Modular React architecture with reusable components and scalable structure.
+### Sustainability Engagement
+Gamified achievements and commitments encourage long-term behavior change.
 
 ---
 
 # ✨ Key Features
 
-## 🌿 Ecosystem Simulation
-
-A living environmental dome that evolves based on user sustainability performance.
+## 🌿 Ecosystem Dome
+A dynamic environmental simulation that reflects the user's sustainability performance.
 
 ## 📝 Carbon Ledger
+Track daily carbon-producing activities and calculate emissions instantly.
 
-Track daily activities and instantly calculate CO₂ impact.
-
-## 🎯 Sustainability Challenges
-
-Commit to eco-friendly actions and track completion progress.
+## 🎯 Active Sustainability Pledges
+Complete eco-friendly challenges and earn rewards.
 
 ## 📄 Offset Certificates
+Generate premium downloadable sustainability certificates.
 
-Generate beautiful downloadable carbon achievement reports.
+## 📈 Interactive Analytics
+Understand carbon trends through engaging visualizations.
 
-## 📈 Analytics Dashboard
-
-Interactive visualizations showing emission patterns and trends.
-
-## 🏆 Gamification System
-
-Earn Carbon Karma Points and unlock achievement tiers.
+## 🏆 Achievement System
+Earn Carbon Karma Points and unlock milestone badges.
 
 ## 🤖 AI Sustainability Advisor
-
-Receive personalized recommendations to reduce environmental impact.
+Receive tailored carbon reduction recommendations.
 
 ## ☁️ Cloud Synchronization
-
-Persistent storage powered by Firebase Firestore.
+Persistent cloud storage powered by Firebase Firestore.
 
 ---
 
@@ -107,22 +108,22 @@ Persistent storage powered by Firebase Firestore.
 
 | Technology | Purpose |
 |------------|---------|
-| React | Component-based UI |
+| React | Component-Based UI |
 | Functional Hooks | State Management |
-| Vite | Fast Build Tool |
+| Vite | Fast Build System |
 | Tailwind CSS | Styling Framework |
 | Motion (Framer Motion) | Animations |
 | Lucide React | Icons |
 
 ---
 
-## Visualization Layer
+## Data Visualization
 
 | Technology | Purpose |
 |------------|---------|
-| Recharts | Interactive Graphs |
-| D3 Concepts | Data Visualization |
-| Carbon Analytics Engine | Trend Calculations |
+| Recharts | Interactive Charts |
+| D3 Concepts | Trend Visualization |
+| Analytics Engine | Carbon Metrics Processing |
 
 ---
 
@@ -131,9 +132,9 @@ Persistent storage powered by Firebase Firestore.
 | Technology | Purpose |
 |------------|---------|
 | Firebase Authentication | User Authentication |
-| Firestore Database | Persistent Data Storage |
+| Firestore Database | Real-Time Storage |
 | Firebase Hosting | Deployment |
-| TypeScript Server | API / Backend Logic |
+| TypeScript Server | Backend Services |
 
 ---
 
@@ -141,79 +142,59 @@ Persistent storage powered by Firebase Firestore.
 
 | Technology | Purpose |
 |------------|---------|
-| jsPDF | Certificate Generation |
-| CSV Export Utility | Data Export |
-| Environmental Audit Engine | Sustainability Insights |
+| jsPDF | PDF Certificate Generation |
+| CSV Export Utility | Offline Data Export |
+| Audit Engine | Carbon Analysis |
 
 ---
 
 # 🌌 Design Philosophy
 
-EcoSphere follows a custom visual identity called:
+EcoSphere follows a custom visual identity:
 
 ## Cosmic Slate Theme™
 
-A futuristic sustainability-focused design system combining environmental symbolism with modern dashboard aesthetics.
+A futuristic sustainability-inspired UI blending environmental symbolism with modern dashboard aesthetics.
 
-### Core Palette
+### Color Palette
 
-| Element | Color |
+| Module | Color |
 |----------|---------|
-| Background | #181A23 |
 | Ecosystem Dome | Emerald Green |
 | Carbon Logs | Electric Purple |
-| Challenges | Cosmic Pink |
-| Certificates | Gold / Silver |
-| Insights | Cyan |
-| Analytics | Amber |
-
----
-
-## UI Principles
-
-### ✨ Spatial Navigation
-
-- Horizontal floating navigation
-- Pill-based module switching
-- Minimal visual clutter
-- Mobile-friendly responsiveness
-
-### 🎨 Claymorphic Design
-
-Custom soft-shadow components:
-
-- Progress indicators
-- Achievement badges
-- Status cards
-- Sustainability rewards
+| Active Pledges | Cosmic Pink |
+| Certificates | Gold & Silver |
+| Insights | Sky Cyan |
+| Trends | Amber |
+| Background | Cosmic Slate (#181A23) |
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-┌─────────────────────────┐
-│      React Frontend     │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│     State Management    │
-└────────────┬────────────┘
-             │
- ┌───────────┼───────────┐
- ▼           ▼           ▼
-Ledger    Insights     Trends
-Engine     Engine      Engine
- │
- ▼
-Firestore Database
- │
- ▼
-AI Recommendation Layer
- │
- ▼
-Certificate Generator
+┌──────────────────────────┐
+│      React Frontend      │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│     State Management     │
+└─────────────┬────────────┘
+              │
+      ┌───────┼────────┐
+      ▼       ▼        ▼
+ Ledger   Insights   Trends
+ Engine    Engine    Engine
+      │
+      ▼
+ Firestore Database
+      │
+      ▼
+ AI Recommendation Layer
+      │
+      ▼
+ PDF Certificate Generator
 ```
 
 ---
@@ -222,80 +203,74 @@ Certificate Generator
 
 ---
 
-# 1️⃣ Ecosystem Dome
+## 1️⃣ Ecosystem Dome
 
-## Purpose
+### Purpose
 
-A real-time environmental simulation representing the user's sustainability health.
+A living sustainability simulation representing the user's environmental health.
 
 ### Features
 
 - Dynamic ecosystem visualization
 - Carbon balance monitoring
-- Positive reinforcement system
-- Environmental health indicators
-
-### Behavior
-
-✅ Sustainable actions improve ecosystem health
-
-⚠️ High emissions trigger environmental warnings
+- Sustainability score calculation
+- Positive and negative environmental feedback
 
 ---
 
-# 2️⃣ Carbon Logs
+## 2️⃣ Carbon Logs
 
-## Purpose
+### Purpose
 
-Track daily activities contributing to carbon emissions.
+Track everyday activities contributing to carbon emissions.
 
-### Supported Categories
+### Categories
 
 #### 🚗 Transportation
 
-- Car travel
-- Public transit
+- Car Travel
+- Public Transit
 - Flights
 - Cycling
 
 #### 🍔 Food
 
-- Plant-based meals
-- Dairy consumption
-- Meat consumption
+- Plant-Based Meals
+- Dairy Consumption
+- Meat Consumption
 
 #### ⚡ Energy
 
-- Electricity usage
+- Home Electricity
 - Heating
-- Appliances
+- Appliance Usage
 
 #### 🛒 Consumption
 
 - Shopping
 - Purchases
-- Resource usage
+- Resource Usage
 
 ### Features
 
 - Instant CO₂ calculations
-- Activity history
-- Entry deletion
-- CSV Export
+- Activity history feed
+- Log deletion
+- CSV export
 
 ---
 
-# 3️⃣ Active Pledges
+## 3️⃣ Active Pledges
 
-## Purpose
+### Purpose
 
-Encourage sustainable behavior through commitments.
+Transform awareness into sustainable action.
 
 ### Challenge Examples
 
 - 🚲 Bike commuting
-- 🌱 Plant-based meals
-- 💡 Reduced electricity use
+- 🌱 Plant-based diet
+- 💡 Lower electricity usage
 - 🚿 Water conservation
 
 ### Audit Engine
@@ -304,85 +279,83 @@ Tracks:
 
 - Completion percentage
 - Progress status
-- Verified actions
+- Sustainability achievements
 
 ### Rewards
 
-Earn Carbon Karma Points upon successful completion.
+Earn **Carbon Karma Points** for successful completion.
 
 ---
 
-# 4️⃣ Interactive Offset Statement
+## 4️⃣ Interactive Offset Statement
 
-## Purpose
+### Purpose
 
-Generate official sustainability reports.
+Generate official sustainability reports and certificates.
 
 ### Features
 
-- Rotating eco quotes
-- Dynamic certificate themes
+- Rotating environmental quotes
+- Dynamic theme customization
 - Verification hash generation
 - Downloadable PDF certificates
 
 ### Available Themes
 
-| Theme | Description |
-|---------|-------------|
-| Emerald | Sustainable Forest Glow |
-| Cyan | Glacial Sea Breeze |
-| Purple | Cosmic Void |
-| Golden | Prestigious Solar Gold |
-| Silver | Industrial Metallic Slate |
-| Yellow | Stardust Amber |
-| Pink | Neon Nebula |
+- Emerald – Sustainable Forest Glow
+- Cyan – Glacial Sea Breeze
+- Purple – Cosmic Void
+- Golden – Prestigious Solar Gold
+- Silver – Industrial Metallic Slate
+- Yellow – Stardust Amber
+- Pink – Neon Nebula
 
 ---
 
-# 5️⃣ Atmospheric Insights
+## 5️⃣ Atmospheric Insights
 
-## Purpose
+### Purpose
 
-Transform raw carbon data into actionable intelligence.
+Convert environmental data into actionable intelligence.
 
 ### Smart Auditing
 
 Provides:
 
-- Top emission sources
+- Top emission categories
 - Carbon reduction opportunities
-- Environmental impact summaries
-- Personalized sustainability suggestions
+- Sustainability summaries
+- Personalized recommendations
 
 ---
 
-# 6️⃣ Data Trends
+## 6️⃣ Data Trends
 
-## Purpose
+### Purpose
 
-Visualize sustainability progress over time.
+Visualize sustainability performance over time.
 
 ### Analytics
 
-- Weekly trends
+- Weekly carbon trends
 - Historical comparisons
-- Reduction forecasting
-- Category performance tracking
+- Forecasting models
+- Progress tracking
 
-### Visual Components
+### Visualizations
 
-- Line Charts
-- Trend Graphs
-- Progress Indicators
-- Emission Curves
+- Interactive Charts
+- Trend Curves
+- Emission Graphs
+- Performance Indicators
 
 ---
 
-# 7️⃣ Milestones & Peers
+## 7️⃣ Milestones & Peers
 
-## Purpose
+### Purpose
 
-Drive engagement through achievements and rewards.
+Reward users for maintaining sustainable habits.
 
 ## 🏆 Carbon Karma Progression
 
@@ -396,34 +369,32 @@ Drive engagement through achievements and rewards.
 
 ### Features
 
-- Achievement Shelf
-- Progress Tracking
-- Badge Unlocking
-- Sustainability Ranking
+- Achievement shelf
+- Badge progression
+- Sustainability milestones
+- Reward tracking
 
 ---
 
-# 8️⃣ AI Advisor
+## 8️⃣ AI Advisor
 
-## Purpose
+### Purpose
 
-Provide personalized sustainability coaching.
+Provide intelligent sustainability guidance.
 
 ### Smart Companion
 
 Analyzes:
 
-- User logs
-- Emission categories
-- Carbon trends
-- Commitment progress
+- Carbon logs
+- Emission patterns
+- Sustainability trends
+- Commitment completion
 
 ### Recommendations
 
-Examples:
-
 - Sustainable transportation alternatives
-- Energy-saving strategies
+- Energy-saving practices
 - Diet optimization
 - Lifestyle improvements
 
@@ -435,9 +406,7 @@ Examples:
 ecosphere-carbon-tracker/
 │
 ├── assets/
-│
 ├── dist/
-│
 ├── src/
 │   ├── components/
 │   ├── data/
@@ -448,14 +417,17 @@ ecosphere-carbon-tracker/
 │   └── types.ts
 │
 ├── .env.example
+├── .gitignore
 ├── firebase-applet-config.json
 ├── firebase-blueprint.json
 ├── firestore.rules
 ├── metadata.json
 ├── server.ts
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
 ├── vite.config.ts
+├── index.html
 └── README.md
 ```
 
@@ -468,7 +440,7 @@ ecosphere-carbon-tracker/
 Install:
 
 - Node.js (v18+ recommended)
-- npm (v9+)
+- npm (v9+ recommended)
 - Git
 
 Verify installation:
@@ -499,9 +471,9 @@ npm install
 
 ---
 
-## Environment Setup
+## Environment Configuration
 
-Create environment variables:
+Create a local environment file:
 
 ```bash
 cp .env.example .env
@@ -522,17 +494,15 @@ VITE_FIREBASE_APP_ID=
 
 # 🔥 Firebase Setup
 
-## Create Firebase Project
+### Create Firebase Project
 
 1. Open Firebase Console
-2. Create project
+2. Create a new project
 3. Enable Authentication
-4. Enable Firestore
-5. Copy Web SDK configuration
+4. Enable Firestore Database
+5. Copy Firebase SDK credentials
 
----
-
-## Deploy Firestore Rules
+### Deploy Firestore Rules
 
 ```bash
 firebase deploy --only firestore:rules
@@ -548,7 +518,7 @@ firebase deploy --only firestore:rules
 npm run dev
 ```
 
-Frontend:
+Application:
 
 ```text
 http://localhost:5173
@@ -578,8 +548,6 @@ http://localhost:3000
 
 # 🏗️ Production Build
 
-Generate optimized build:
-
 ```bash
 npm run build
 ```
@@ -592,7 +560,7 @@ dist/
 
 ---
 
-# 👀 Preview Build
+# 👀 Preview Production Build
 
 ```bash
 npm run preview
@@ -631,51 +599,49 @@ Deploy the generated `dist/` folder to:
 
 ---
 
-# 🔐 Security
+# 🔐 Security & Reliability
 
-### Authentication
+### Security
 
 - Firebase Authentication
-- Protected user sessions
-
-### Database Security
-
-- Firestore Rules
-- Access-controlled collections
+- Firestore Security Rules
+- Protected User Sessions
+- Secure Data Handling
 
 ### Reliability
 
-- Modular architecture
-- Reusable components
-- Error-tolerant workflows
+- Modular Architecture
+- Reusable Components
+- Responsive Design
+- Scalable State Management
 
 ---
 
 # 📊 Evaluation Criteria Alignment
 
-| Criteria | Solution |
-|-----------|-----------|
+| Criteria | Implementation |
+|-----------|----------------|
 | Code Quality | Modular React Architecture |
 | Security | Firebase Auth & Firestore Rules |
 | Efficiency | Optimized Rendering |
-| Testing Readiness | Isolated Components |
-| Accessibility | Responsive UI & Clear Navigation |
+| Accessibility | Responsive UI |
+| Real-World Usability | Sustainability Tracking System |
 
 ---
 
 # 🌍 Real-World Impact
 
-EcoSphere transforms sustainability from a passive awareness problem into an actionable, measurable, and rewarding journey.
+EcoSphere helps users move beyond passive climate awareness by providing measurable actions, intelligent insights, and long-term motivation.
 
-Users gain:
+The platform promotes:
 
-- Awareness of environmental impact
-- Practical reduction strategies
-- Motivation through gamification
-- Long-term sustainability habits
-- Meaningful environmental insights
+- Environmental responsibility
+- Sustainable habit formation
+- Data-driven decision making
+- Climate awareness through engagement
+- Long-term behavioral change
 
-By combining environmental science, behavioral psychology, and modern software engineering, EcoSphere helps individuals make climate-positive decisions every day.
+By combining climate science, gamification, AI, and modern software engineering, EcoSphere transforms sustainability into an achievable daily practice.
 
 ---
 
@@ -686,22 +652,24 @@ By combining environmental science, behavioral psychology, and modern software e
 - 🌐 Regional carbon benchmarks
 - 🤝 Community sustainability challenges
 - 🏅 Global leaderboards
-- 📱 Progressive Web App support
+- 📱 Progressive Web App (PWA)
 - 📸 Receipt scanning for carbon estimation
 - 🔗 Carbon offset marketplace integration
-- 🛰️ Carbon footprint forecasting
+- 🛰️ Carbon forecasting engine
 - 🧠 Gemini-powered advanced advisor
 - 🌎 Multi-language support
 
 ---
 
-# 👨‍💻 Author
+# 👩‍💻 Author
 
-### EcoSphere Climate Ledger Hub
+## PRIYANKA PRIYADARSINI BEJ
 
-Built for climate awareness, sustainability engagement, and environmental responsibility.
+**Developer | AI Enthusiast | Full-Stack Builder**
 
-> "Small actions, tracked consistently, can create planetary-scale impact."
+Designed and developed **EcoSphere Climate Ledger Hub** as an intelligent climate-awareness platform that combines carbon tracking, sustainability education, gamification, analytics, and AI-powered recommendations.
+
+> *"Technology has the power to turn awareness into action. EcoSphere was built to help individuals make small sustainable choices that collectively create meaningful environmental impact."*
 
 ---
 
@@ -729,6 +697,12 @@ Feel free to use, modify, and contribute.
 
 ### 🌿 Building a greener future, one action at a time.
 
-**EcoSphere Climate Ledger Hub**
+## EcoSphere Climate Ledger Hub
+
+### Developed by PRIYANKA PRIYADARSINI BEJ
+
+🌐 Live Demo: https://project-f4f70adf-9a88-48e9-962.web.app/
+
+⭐ If you found this project valuable, consider starring the repository.
 
 </div>
