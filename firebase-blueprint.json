@@ -1,0 +1,93 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "The user profile detailing identity, avatar selection, and carbon archetype designation.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The display name of the Bio-Sphere explorer."
+        },
+        "email": {
+          "type": "string",
+          "description": "The registered identity email address."
+        },
+        "avatar": {
+          "type": "string",
+          "description": "The selected avatar icon identifier."
+        },
+        "archetype": {
+          "type": "string",
+          "description": "The climate role role (e.g. Carbon Pioneer)."
+        }
+      },
+      "required": ["name", "email"]
+    },
+    "LedgerEntry": {
+      "title": "LedgerEntry",
+      "description": "Individual tracker items details within the carbon bookkeeping ledger.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "value": { "type": "number" },
+        "unit": { "type": "string" },
+        "carbonImpact": { "type": "number" },
+        "date": { "type": "string" },
+        "isReduction": { "type": "boolean" }
+      },
+      "required": ["id", "category", "description", "value", "unit", "carbonImpact", "date", "isReduction"]
+    },
+    "WeeklyChallenge": {
+      "title": "WeeklyChallenge",
+      "description": "Vibrant custom sustainability checklists for planetary challenges.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "co2SavedPerDay": { "type": "number" },
+        "completed": { "type": "boolean" },
+        "daysDuration": { "type": "number" },
+        "daysSucceeded": { "type": "number" }
+      },
+      "required": ["id", "title", "description", "category", "co2SavedPerDay", "completed", "daysDuration", "daysSucceeded"]
+    },
+    "UserDataRecord": {
+      "title": "UserDataRecord",
+      "description": "Comprehensive document encapsulating all user data models, synchronized to the user doc ID.",
+      "type": "object",
+      "properties": {
+        "totalKarmaPoints": {
+          "type": "number",
+          "description": "Acquired gamified reputation or point levels."
+        },
+        "userProfile": {
+          "$ref": "#/entities/UserProfile"
+        },
+        "ledgerEntries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/entities/LedgerEntry"
+          }
+        },
+        "weeklyChallenges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/entities/WeeklyChallenge"
+          }
+        }
+      },
+      "required": ["totalKarmaPoints", "userProfile", "ledgerEntries", "weeklyChallenges"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserDataRecord",
+      "description": "Dedicated private document storing all attributes, entries, and progress stats for each explorer."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "EcoSphere Carbon Tracker",
+  "description": "A peaceful and elegant personal carbon footprint statement featuring live ecosystem modeling, daily logs tracking, and custom AI-powered carbon offsets counseling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

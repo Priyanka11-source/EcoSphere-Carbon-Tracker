@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-app: #181a23;                 /* Dracula-style deep space background */
+  --bg-card: #282a36;                /* Dracula theme card background */
+  --bg-inner: #1e1f29;               /* Dracula dark background inner container */
+  --border-main: #44475a;            /* Dracula selection / thin border */
+  --text-main: #f8f8f2;              /* Dracula crisp default light text */
+  --text-muted: #6272a4;             /* Dracula blueish-grey comment text */
+  
+  --theme-emerald: #50fa7b;          /* Dracula Neon Green offset */
+  --theme-mint: #8be9fd;             /* Dracula Cyan atmospheric winds */
+  --theme-orange: #ff79c6;           /* Dracula Radiant Pink solar */
+  --theme-amber: #f1fa8c;            /* Dracula Bright Yellow score details */
+}
+
+/* Bind core application variables */
+body {
+  background-color: #12131a !important;
+  color: var(--text-main) !important;
+  font-family: var(--font-sans) !important;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(189, 147, 249, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 90% 15%, rgba(255, 121, 198, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(139, 233, 253, 0.13) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(80, 250, 123, 0.12) 0%, transparent 45%),
+    linear-gradient(135deg, #12131a 0%, #1b1d28 55%, #0a0b10 100%) !important;
+  background-attachment: fixed;
+}
+
+/* Glassmorphic Cards Setup */
+.glass-panel {
+  background: rgba(40, 42, 54, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(120%) !important;
+  border: 1px solid rgba(189, 147, 249, 0.25) !important;
+  box-shadow: 
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.12),
+    0 10px 40px rgba(0, 0, 0, 0.6) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(189, 147, 249, 0.55) !important;
+  box-shadow: 
+    0 0 25px rgba(189, 147, 249, 0.18),
+    0 15px 45px rgba(0, 0, 0, 0.7),
+    inset 0 1px 2px rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Custom glow classes for Dracula elements */
+.glow-purple-lg {
+  border-color: rgba(189, 147, 249, 0.6) !important;
+  box-shadow: 
+    0 0 25px rgba(189, 147, 249, 0.45), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.15) !important;
+}
+
+.glow-green-lg {
+  border-color: rgba(80, 250, 123, 0.5) !important;
+  box-shadow: 
+    0 0 25px rgba(80, 250, 123, 0.35), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+.glow-pink-lg {
+  border-color: rgba(255, 121, 198, 0.5) !important;
+  box-shadow: 
+    0 0 25px rgba(255, 121, 198, 0.35), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+.glow-cyan-lg {
+  border-color: rgba(139, 233, 253, 0.5) !important;
+  box-shadow: 
+    0 0 25px rgba(139, 233, 253, 0.35), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Glow animations */
+@keyframes neon-pulse-purple {
+  0%, 100% { 
+    box-shadow: 0 0 15px rgba(189, 147, 249, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: rgba(189, 147, 249, 0.25);
+  }
+  50% { 
+    box-shadow: 0 0 35px rgba(189, 147, 249, 0.55), inset 0 1px 2.5px rgba(255, 255, 255, 0.2);
+    border-color: rgba(189, 147, 249, 0.65);
+  }
+}
+
+.animate-glow-purple {
+  animation: neon-pulse-purple 3.5s infinite ease-in-out;
+}
+
+.glass-panel-heavy {
+  background: rgba(30, 31, 41, 0.94) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(189, 147, 249, 0.32) !important;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.18),
+    0 20px 60px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Spatial Bento Grid cells with tactile lift */
+.bento-cell {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-cell:hover {
+  box-shadow: 
+    0 20px 40px rgba(189, 147, 249, 0.12),
+    0 0 30px rgba(255, 121, 198, 0.08) !important;
+}
+
+/* Claymorphic 3D Puffy Pill & Badge controls */
+.clay-puffy {
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    inset -3px -3px 7px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.12),
+    3px 6px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.clay-puffy:active {
+  transform: scale(0.96);
+  box-shadow: 
+    inset -1px -1px 3px rgba(0, 0, 0, 0.5),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.12),
+    1px 2px 4px rgba(0, 0, 0, 0.4) !important;
+}
+
+.clay-btn-green {
+  background: linear-gradient(135deg, #bd93f9 0%, #8c5af5 100%) !important;
+  text-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.4);
+  box-shadow: 
+    inset -3px -3px 8px rgba(93, 40, 244, 0.8),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.35),
+    0 10px 20px rgba(189, 147, 249, 0.28) !important;
+}
+
+.clay-btn-green:hover {
+  background: linear-gradient(135deg, #ff79c6 0%, #bd93f9 100%) !important;
+}
+
+/* Elegant Neomorphism Recessed Outer Bevels */
+.neo-inset {
+  box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.65),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.05) !important;
+}
+
+.neo-outset {
+  background-color: #282a36 !important;
+  box-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.5),
+    -2px -2px 6px rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Liquid glass glowing orbs with orbital animation */
+.liquid-orb-1 {
+  background: radial-gradient(circle, rgba(189, 147, 249, 0.15) 0%, rgba(139, 233, 253, 0) 70%);
+  animation: floatOrb1 20s infinite alternate ease-in-out;
+}
+
+.liquid-orb-2 {
+  background: radial-gradient(circle, rgba(255, 121, 198, 0.12) 0%, rgba(189, 147, 249, 0) 70%);
+  animation: floatOrb2 25s infinite alternate ease-in-out;
+}
+
+@keyframes floatOrb1 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(120px, -60px) scale(1.15); }
+  100% { transform: translate(-40px, 90px) scale(0.9); }
+}
+
+@keyframes floatOrb2 {
+  0% { transform: translate(0px, 0px) scale(1.2); }
+  50% { transform: translate(-80px, 110px) scale(0.85); }
+  100% { transform: translate(90px, -40px) scale(1.05); }
+}
+
+/* Comprehensive dark theme forest-obsidian layout overrides */
+.min-h-screen,
+.bg-\[\#070b14\],
+.bg-\[\#070b14\]\/90,
+.bg-slate-950,
+.bg-[#070b14] {
+  background-color: var(--bg-app) !important;
+}
+
+/* Card and primary sections */
+.bg-\[\#0e1628\],
+.bg-\[\#0f172a\],
+.bg-\[\#0e1626\],
+.bg-\[\#0e1726\],
+.bg-\[\#0b1329\],
+.bg-\[\#0e1726\],
+.bg-slate-900,
+.bg-[#0f172a],
+.bg-[#0e1628],
+#personalized-analytics-panel,
+#eco-challenges-quest-library,
+#daily-ledger-card,
+#ai-guardian-panel,
+#social-leaderboard-panel,
+#badges-cabinet-panel,
+#rpg-terminal-panel,
+#challenges-dashboard-pane,
+#quiz-questions-card,
+#activity-historic-panel {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-main) !important;
+  color: var(--text-main) !important;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Inner panels, inputs, and deep sections */
+.bg-\[\#070b14\]\/80,
+.bg-\[\#070b14\]\/55,
+.bg-\[\#070b14\]\/50,
+.bg-\[\#070b14\]\/40,
+.bg-\[\#070b14\]\/60,
+.bg-indigo-950\/40,
+.bg-indigo-950\/80,
+.bg-indigo-950\/50,
+.bg-slate-900\/60,
+.bg-[#070b14],
+.bg-[#070b14]/50,
+#guardian-chat-grid,
+#rpg-action-terminal-row {
+  background-color: var(--bg-inner) !important;
+  border-color: var(--border-main) !important;
+}
+
+/* Clean up button hover states in RPG / Quiz */
+#quiz-questions-card button.border-slate-800 {
+  background-color: var(--bg-inner) !important;
+  border-color: var(--border-main) !important;
+}
+#quiz-questions-card button.border-slate-800:hover {
+  background-color: rgba(189, 147, 249, 0.1) !important;
+  border-color: var(--theme-mint) !important;
+}
+
+/* Border overrides */
+.border-slate-800,
+.border-slate-800\/80,
+.border-slate-700,
+.border-slate-700\/80,
+.border-[#1e293b],
+.border-[#1e293b]/80,
+.border-indigo-500\/20,
+.border-indigo-800\/50,
+.border-indigo-900\/40,
+.border-slate-900 {
+  border-color: var(--border-main) !important;
+}
+
+/* Replace specific accent tags in badges & lists with Dracula Purple and Green */
+.bg-cyan-950,
+.bg-indigo-950 {
+  background-color: rgba(189, 147, 249, 0.15) !important;
+  border-color: rgba(189, 147, 249, 0.3) !important;
+}
+
+.bg-emerald-950,
+.bg-teal-950 {
+  background-color: rgba(80, 250, 123, 0.12) !important;
+  border-color: rgba(80, 250, 123, 0.25) !important;
+}
+
+/* Primary heading text colors */
+.text-white,
+.text-slate-100,
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main) !important;
+  font-family: var(--font-display), var(--font-sans), sans-serif !important;
+}
+
+.text-slate-200,
+.text-slate-300 {
+  color: var(--text-main) !important;
+  opacity: 0.95;
+}
+
+.text-slate-400,
+.text-slate-500 {
+  color: var(--text-muted) !important;
+}
+
+/* Custom interactive inputs to blend into Dracula space design */
+input[type="text"], input[type="number"], select, textarea {
+  background-color: var(--bg-inner) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-main) !important;
+}
+
+/* Transparent overlays */
+#eco-login-overlay {
+  background-color: var(--bg-app) !important;
+}
+
+/* Sky gradient overlay of Bio-Dome */
+#active-eco-garden .bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #1e1f29, #181a23) !important;
+}
+#garden-visualizer path[fill="#171c35"] {
+  fill: #282a36 !important; /* Dracula background */
+}
+#garden-visualizer path[fill="#3c172a"] {
+  fill: #44475a !important; /* Dracula current line */
+}
+#garden-visualizer path[fill="#241818"] {
+  fill: #1a1b26 !important; /* deep recessed */
+}
+
+/* Smooth active menu buttons */
+#module-navigation-tabs button {
+  border-color: transparent !important;
+}
+
+/* 🎨 Premium Contrast Card Themes - Dynamic Dracula Color-Shift styling */
+.card-theme-garden {
+  background: linear-gradient(150deg, #18202d 0%, #0d121c 55%, #1d102a 100%) !important;
+  border: 1.5px solid rgba(139, 233, 253, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(139, 233, 253, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-garden:hover {
+  border-color: rgba(139, 233, 253, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(139, 233, 253, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-theme-calculator {
+  background: linear-gradient(150deg, #1f1b2b 0%, #25143a 55%, #110d1c 100%) !important;
+  border: 1.5px solid rgba(189, 147, 249, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(189, 147, 249, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-calculator:hover {
+  border-color: rgba(189, 147, 249, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(189, 147, 249, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-theme-commitments {
+  background: linear-gradient(150deg, #131f1a 0%, #0c1512 55%, #180d1e 100%) !important;
+  border: 1.5px solid rgba(80, 250, 123, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(80, 250, 123, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-commitments:hover {
+  border-color: rgba(80, 250, 123, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(80, 250, 123, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-theme-ledger {
+  background: linear-gradient(150deg, #241620 0%, #170e17 55%, #10121a 100%) !important;
+  border: 1.5px solid rgba(255, 121, 198, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(255, 121, 198, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-ledger:hover {
+  border-color: rgba(255, 121, 198, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(255, 121, 198, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-theme-advisor {
+  background: linear-gradient(150deg, #1b282d 0%, #101720 55%, #1a1226 100%) !important;
+  border: 1.5px solid rgba(241, 250, 140, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(241, 250, 140, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-advisor:hover {
+  border-color: rgba(241, 250, 140, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(241, 250, 140, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 🏔️ Premium Glowing Header with high contrast separation */
+.premium-header {
+  background: linear-gradient(to right, #130f22 0%, #070e16 40%, #0d1a15 100%) !important;
+  border-bottom: 2.5px solid #bd93f9 !important;
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.95),
+    0 4px 30px rgba(189, 147, 249, 0.15),
+    0 -4px 30px rgba(139, 233, 253, 0.08) !important;
+  position: relative;
+  z-index: 50;
+}
+
+.premium-header::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(to right, #bd93f9 0%, #ff79c6 30%, #8be9fd 65%, #50fa7b 100%);
+  z-index: 51;
+  pointer-events: none;
+}
+
+.card-theme-trend {
+  background: linear-gradient(150deg, #16111f 0%, #0c0914 55%, #1a1e28 100%) !important;
+  border: 1.5px solid rgba(255, 121, 198, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(255, 121, 198, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-trend:hover {
+  border-color: rgba(255, 121, 198, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(255, 121, 198, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-theme-insights-analytics {
+  background: linear-gradient(150deg, #102422 0%, #0c1514 55%, #180d1e 100%) !important;
+  border: 1.5px solid rgba(80, 250, 123, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(80, 250, 123, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-insights-analytics:hover {
+  border-color: rgba(80, 250, 123, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(80, 250, 123, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-theme-insights-challenges {
+  background: linear-gradient(150deg, #13172c 0%, #0d1020 55%, #1c0e22 100%) !important;
+  border: 1.5px solid rgba(139, 233, 253, 0.45) !important;
+  box-shadow: 
+    0 12px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(139, 233, 253, 0.12),
+    inset 0 1px 2.5px rgba(255, 255, 255, 0.14) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.card-theme-insights-challenges:hover {
+  border-color: rgba(139, 233, 253, 0.75) !important;
+  box-shadow: 
+    0 18px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(139, 233, 253, 0.28),
+    inset 0 1px 3.5px rgba(255, 255, 255, 0.2) !important;
+}
+
+

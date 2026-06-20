@@ -1,0 +1,77 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // 1. Global Safety Net: Default Deny Catch-All
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Custom helper validations (Phase 3: Primitive Definition)
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Entity validator definitions
+    function isValidUserProfile(profile) {
+      return profile.name is string && profile.name.size() <= 100
+        && profile.email is string && profile.email.size() <= 200
+        && profile.avatar is string && profile.avatar.size() <= 50
+        && profile.archetype is string && profile.archetype.size() <= 50;
+    }
+
+    function isValidLedgerEntry(entry) {
+      return entry.id is string && entry.id.size() <= 64
+        && entry.category is string && entry.category.size() <= 32
+        && entry.description is string && entry.description.size() <= 256
+        && (entry.value is int || entry.value is float)
+        && entry.unit is string && entry.unit.size() <= 32
+        && (entry.carbonImpact is int || entry.carbonImpact is float)
+        && entry.date is string && entry.date.size() <= 32
+        && entry.isReduction is bool;
+    }
+
+    function isValidWeeklyChallenge(challenge) {
+      return challenge.id is string && challenge.id.size() <= 64
+        && challenge.title is string && challenge.title.size() <= 128
+        && challenge.description is string && challenge.description.size() <= 512
+        && challenge.category is string && challenge.category.size() <= 32
+        && (challenge.co2SavedPerDay is int || challenge.co2SavedPerDay is float)
+        && challenge.completed is bool
+        && challenge.daysDuration is int
+        && challenge.daysSucceeded is int;
+    }
+
+    function isValidUserDataRecord(data) {
+      return (data.totalKarmaPoints is int || data.totalKarmaPoints is float)
+        && isValidUserProfile(data.userProfile)
+        && data.ledgerEntries is list && data.ledgerEntries.size() <= 200
+        && data.weeklyChallenges is list && data.weeklyChallenges.size() <= 50;
+    }
+
+    // Secure match block for the specific User collections
+    match /users/{userId} {
+      // Allow read for owners
+      allow read: if isOwner(userId) && isValidId(userId);
+
+      // Allow create and update validations
+      allow create: if isOwner(userId) 
+        && isValidId(userId)
+        && isValidUserDataRecord(request.resource.data);
+
+      allow update: if isOwner(userId)
+        && isValidId(userId)
+        && isValidUserDataRecord(request.resource.data);
+        
+      allow delete: if isOwner(userId) && isValidId(userId);
+    }
+  }
+}
