@@ -1,4 +1,4 @@
-# Use official Node.js Alpine base image for a lightweight container
+# Use lightweight Node.js base image
 FROM node:18-alpine
 
 WORKDIR /app
@@ -6,14 +6,11 @@ WORKDIR /app
 # Copy package descriptors
 COPY package*.json ./
 
-# Install dependencies (production and dev for building)
-RUN npm ci
+# Install production dependencies only to keep the image small
+RUN npm ci --omit=dev
 
-# Copy application files
-COPY . .
-
-# Build client-side assets and backend bundles
-RUN npm run build
+# Copy the pre-built assets (frontend and backend bundle)
+COPY dist ./dist
 
 # Expose default port
 EXPOSE 3000
@@ -22,4 +19,4 @@ EXPOSE 3000
 ENV NODE_ENV=production
 
 # Start the Node Express backend
-CMD ["npm", "start"]
+CMD ["node", "dist/server.cjs"]
