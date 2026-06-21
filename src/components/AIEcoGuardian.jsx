@@ -538,6 +538,7 @@ Or try the quick action buttons to generate automated challenges and projections
     onClick={handleCycleReflection}
     className="text-slate-400 hover:text-white hover:bg-white/5 active:scale-95 transition-all p-1.5 rounded-lg flex items-center justify-center cursor-pointer border-none bg-transparent"
     title="Next prompt/question"
+    aria-label="Next reflection prompt"
   >
               <RefreshCw className="w-3.5 h-3.5" />
             </button>
@@ -546,6 +547,7 @@ Or try the quick action buttons to generate automated challenges and projections
     onClick={() => setReflectionBannerExpanded(!reflectionBannerExpanded)}
     className="text-slate-400 hover:text-white hover:bg-white/5 active:scale-95 transition-all p-1.5 rounded-lg flex items-center justify-center cursor-pointer border-none bg-transparent"
     title={reflectionBannerExpanded ? "Collapse panel" : "Expand panel"}
+    aria-label={reflectionBannerExpanded ? "Collapse reflection panel" : "Expand reflection panel"}
   >
               {reflectionBannerExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </button>

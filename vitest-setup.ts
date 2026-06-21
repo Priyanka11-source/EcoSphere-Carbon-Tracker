@@ -16,6 +16,10 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
+// Mock HTMLElement.prototype.scrollIntoView
+window.HTMLElement.prototype.scrollIntoView = vi.fn();
+
+
 // Mock Firebase module
 vi.mock('./src/lib/firebase', () => {
   return {

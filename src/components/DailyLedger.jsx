@@ -82,6 +82,7 @@ export default function DailyLedger({ onAddEntry, entries, onRemoveEntry }) {
           {["transport", "food", "energy", "shopping"].map((cat) => <button
     key={cat}
     id={`tab-btn-${cat}`}
+    aria-label={cat}
     onClick={() => {
       setActiveCategory(cat);
       setSelectedPresetIndex(0);
