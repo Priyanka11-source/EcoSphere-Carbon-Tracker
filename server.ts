@@ -39,6 +39,14 @@ async function startServer() {
     try {
       const { message, ledgerSummary, history, actionType } = req.body;
 
+      // Input validation for security
+      if (message && typeof message !== 'string') {
+        return res.status(400).json({ error: "Invalid message format" });
+      }
+      if (actionType && typeof actionType !== 'string') {
+        return res.status(400).json({ error: "Invalid actionType format" });
+      }
+
       // Lazy check for API key
       const key = process.env.GEMINI_API_KEY;
       if (!key) {
