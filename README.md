@@ -583,6 +583,22 @@ npm run lint
 npm run test
 ```
 
+### Testing Strategy & Coverage
+The project includes a robust, automated test suite configured using **Vitest**, **React Testing Library**, and a headless **JSDOM** environment to achieve high coverage:
+
+* **Mocking Firebase API Layer**: Created globally available mocks inside `vitest-setup.ts` to intercept Firestore transactions (`getDoc`, `setDoc`) and Authentication listeners (`onAuthStateChanged`, `signInWithEmailAndPassword`) to allow fast, fully isolated, and clean test executions.
+* **Testing Animated Motion Components**: Designed standard proxy elements to replace `motion/react` components synchronously during testing, stripping away asynchronous Framer Motion transitions so unit tests assert layout changes instantly.
+* **Mocking Headless Layout Hooks**: Added overrides for browser-only functions like `HTMLElement.prototype.scrollIntoView` and `window.matchMedia` to keep UI components from crashing in the headless JSDOM terminal runner.
+
+### Test Suites Included
+1. **`EcoSphereLogo.test.jsx`**: Validates structural SVG vectors, custom widths/heights, and custom color gradients.
+2. **`DailyLedger.test.jsx`**: Asserts carbon calculations, custom log quantities inputs, and preset switches.
+3. **`EcoQuizGame.test.jsx`**: Simulates the full game cycle, score updates, fact checks, and restarts.
+4. **`EnvironmentalInsights.test.jsx`**: Validates percentage computations, top category offenders, opt-in commitments, and rotating advice cards.
+5. **`ActiveEcoGarden.test.jsx`**: Tests bio-dome visual thresholds (Healthy vs. Unbalanced vs. Poor), dome view toggles, and detail fact-sheet interactive cards.
+6. **`AIEcoGuardian.test.jsx`**: Asserts welcome messaging, quote-cycling, predictive future dashboard tables, reflection choices, and API request handling.
+
+
 ---
 
 # 🚀 Deployment
