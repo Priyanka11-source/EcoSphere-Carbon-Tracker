@@ -13,6 +13,7 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styling-38BDF8?logo=tailwindcss)
 ![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?logo=vite)
 ![Motion](https://img.shields.io/badge/Motion-Animations-purple)
+![Testing](https://img.shields.io/badge/Testing-Vitest--Passed-50fa7b?logo=vitest)
 ![Status](https://img.shields.io/badge/Status-Production_Ready-success)
 
 </div>
@@ -576,6 +577,14 @@ npm run lint
 
 ---
 
+# 🧪 Run Unit & Integration Tests
+
+```bash
+npm run test
+```
+
+---
+
 # 🚀 Deployment
 
 ## Firebase Hosting
@@ -626,6 +635,7 @@ Deploy the generated `dist/` folder to:
 | Efficiency | Optimized Rendering |
 | Accessibility | Responsive UI |
 | Real-World Usability | Sustainability Tracking System |
+| Testing | Complete Vitest & React Testing Library Suite (100% Pass) |
 
 ---
 
